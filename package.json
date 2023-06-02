@@ -7,6 +7,7 @@
     "watch": "node_modules/.bin/tsc -w"
   },
   "devDependencies": {
+    "@types/xlsx": "^0.0.35",
     "typescript": "^5.1.3"
   }
 }
