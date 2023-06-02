@@ -1,0 +1,12 @@
+{
+  "name": "cobie-coach",
+  "author": "James S. Bayley",
+  "private": true,
+  "scripts": {
+    "build": "node_modules/.bin/tsc",
+    "watch": "node_modules/.bin/tsc -w"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
+}

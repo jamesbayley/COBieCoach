@@ -1,0 +1,29 @@
+{
+	"name": "cobie-coach",
+	"runArgs": ["--name", "cobie-coach"],
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+	"postCreateCommand": "pwsh .scripts/Restore-Project.ps1",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/python:1": {},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/powershell:1": {},
+		"ghcr.io/devcontainers/features/azure-cli:1": {} 
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"github.copilot",
+				"ms-python.python",
+				"ms-vscode.powershell",
+				"ms-python.vscode-pylance",
+				"ms-azuretools.vscode-bicep",
+				"ms-azuretools.vscode-docker",
+				"bierner.markdown-preview-github-styles",
+				"esbenp.prettier-vscode",
+				"ritwickdey.liveserver"
+			]
+		}
+	}
+}
