@@ -5,6 +5,7 @@
     "module": "ESNext",
     "allowJs": false,
     "removeComments": true,
+    "moduleResolution": "nodenext",
     "outDir": "public/js"
   }
 }
