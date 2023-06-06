@@ -40,6 +40,10 @@ jobs:
   build-web-app:
     name: Build Web App
     runs-on: Ubuntu-Latest
+    
+    defaults:
+      run:
+        shell: pwsh
 
     steps:
       - name: Checkout Repository
@@ -66,11 +70,15 @@ jobs:
     name: Deploy App
     runs-on: Ubuntu-Latest
     needs: [build-infrastructure, build-web-app]
-
+    
     environment: 
       name: Production
       url: ${{ vars.CUSTOM_DOMAIN_NAME }}
 
+    defaults:
+      run:
+        shell: pwsh
+        
     steps:
       - name: Download Build Artifacts
         uses: actions/download-artifact@v3
