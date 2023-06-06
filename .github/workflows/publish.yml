@@ -95,17 +95,13 @@ jobs:
           $Response = az staticwebapp secrets list `
             --name ${{ secrets.AZURE_STATIC_WEB_APP_NAME }} `
             --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }}
-
-          $Response | 
-          ConvertFrom-Json | 
-          Select-Object -ExpandProperty "Properties" |
-          Select-Object -ExpandProperty "apiKey" |
-          ForEach-Object { 
-            Out-File `
-              -Append `
-              -FilePath $Env:GITHUB_ENV `
-              -InputObject "STATIC_WEB_APP_TOKEN=$_"
-          }
+          
+          $Token = ($Response | ConvertFrom-Json).Properties.ApiKey
+          
+          Out-File `
+            -InputObject "STATIC_WEB_APP_TOKEN=$Token" `
+            -FilePath $Env:GITHUB_ENV `
+            -Append
           
       - name: Deploy Static Web App
         uses: azure/static-web-apps-deploy@v1
