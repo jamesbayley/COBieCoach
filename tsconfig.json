@@ -1,5 +1,5 @@
 {
-  "exclude": [ "js" ],
+  "include": [ "src/**/*" ],
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
