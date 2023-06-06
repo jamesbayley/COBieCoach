@@ -31,7 +31,7 @@ jobs:
             --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }} `
             --template-file "./.azure/templates/main.bicep" `
             --parameters `
-              staticWebAppName=${{ secrets.AZURE_STATIC_WEB_APP_NAME }}
+              staticWebAppName=${{ secrets.AZURE_STATIC_WEB_APP_NAME }} `
               location=${{ secrets.AZURE_STATIC_WEB_APP_LOCATION }}
 
       - name: Set Custom Domain
