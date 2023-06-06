@@ -39,8 +39,7 @@ jobs:
           az staticwebapp hostname set `
             --name ${{ secrets.AZURE_STATIC_WEB_APP_NAME }} `
             --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }} `
-            --hostname ${{ vars.CUSTOM_DOMAIN_NAME }} `
-            --validation-method "dns-txt-token"
+            --hostname ${{ vars.CUSTOM_DOMAIN_NAME }}
 
   build-web-app:
     name: Build Web App
