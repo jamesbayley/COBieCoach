@@ -9,6 +9,10 @@ jobs:
     name: Build Infrastructure
     runs-on: Ubuntu-Latest
     environment: Production
+    
+    defaults:
+      run:
+        shell: pwsh
 
     steps:
       - name: Login to Azure
@@ -47,7 +51,7 @@ jobs:
           node-version: 18
 
       - name: Restore Projects
-        run: ./scripts/Restore-Project.ps1
+        run: ./.scripts/Restore-Project.ps1
 
       - name: Build App
         run: npm run build
