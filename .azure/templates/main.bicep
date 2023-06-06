@@ -1,6 +1,6 @@
 param staticWebAppName string
 
-@allowable(
+@allowed(
   'westus2',
   'centralus',
   'eastus2',
