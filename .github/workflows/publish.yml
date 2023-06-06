@@ -1,102 +1,102 @@
-# name: Production
+name: Production
 
-# on:
-#   push:
-#     branches: main
+on:
+  push:
+    branches: main
 
-# jobs:
-#   build-infrastructure:
-#     name: Build Infrastructure
-#     runs-on: Ubuntu-Latest
-#     environment: Production
+jobs:
+  build-infrastructure:
+    name: Build Infrastructure
+    runs-on: Ubuntu-Latest
+    environment: Production
 
-#     steps:
-#       - name: Login to Azure
-#         run: |
-#           az login --service-principal `
-#             -u ${{ secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_ID }} `
-#             -p ${{ secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET }} `
-#             --tenant ${{ secrets.AZURE_TENANT_ID }}
+    steps:
+      - name: Login to Azure
+        run: |
+          az login --service-principal `
+            -u ${{ secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_ID }} `
+            -p ${{ secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET }} `
+            --tenant ${{ secrets.AZURE_TENANT_ID }}
 
-#       - name: Deploy Infrastructure
-#         run: |
-#           az deployment group create `
-#             --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }} `
-#             --template-file "./.azure/templates/main.bicep" `
-#             --parameters `
-#               staticWebAppName=${{ secrets.AZURE_STATIC_WEB_APP_NAME }}
+      - name: Deploy Infrastructure
+        run: |
+          az deployment group create `
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }} `
+            --template-file "./.azure/templates/main.bicep" `
+            --parameters `
+              staticWebAppName=${{ secrets.AZURE_STATIC_WEB_APP_NAME }}
 
-#       - name: Set Custom Domain
-#         run: |
-#           az staticwebapp custom-domain set `
-#             --name ${{ secrets.AZURE_STATIC_WEB_APP_NAME }} `
-#             --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }} `
-#             --hostname ${{ vars.CUSTOM_DOMAIN_NAME }}
+      - name: Set Custom Domain
+        run: |
+          az staticwebapp custom-domain set `
+            --name ${{ secrets.AZURE_STATIC_WEB_APP_NAME }} `
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }} `
+            --hostname ${{ vars.CUSTOM_DOMAIN_NAME }}
 
-#   build-web-app:
-#     name: Build Web App
-#     runs-on: Ubuntu-Latest
+  build-web-app:
+    name: Build Web App
+    runs-on: Ubuntu-Latest
 
-#     steps:
-#       - name: Checkout Repository
-#         uses: actions/checkout@v3
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-#       - name: Setup Node.js
-#         uses: actions/setup-node@v3
-#         with:
-#           node-version: 18
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-#       - name: Restore Projects
-#         run: ./scripts/Restore-Project.ps1
+      - name: Restore Projects
+        run: ./scripts/Restore-Project.ps1
 
-#       - name: Build App
-#         run: npm run build
+      - name: Build App
+        run: npm run build
 
-#       - name: Upload Assets
-#         uses: actions/upload-artifact@v3
-#         with:
-#           name: app-artifacts
-#           path: ./public
+      - name: Upload Assets
+        uses: actions/upload-artifact@v3
+        with:
+          name: app-artifacts
+          path: ./public
 
-#   deploy-app:
-#     name: Deploy App
-#     runs-on: Ubuntu-Latest
-#     needs: [build-infrastructure, build-web-app]
+  deploy-app:
+    name: Deploy App
+    runs-on: Ubuntu-Latest
+    needs: [build-infrastructure, build-web-app]
 
-#     environment: 
-#       name: Production
-#       url: ${{ vars.CUSTOM_DOMAIN_NAME }}
+    environment: 
+      name: Production
+      url: ${{ vars.CUSTOM_DOMAIN_NAME }}
 
-#     steps:
-#        - name: Download Build Artifacts
-#         uses: actions/download-artifact@v3
-#         with:
-#           name: app-artifacts
-#           path: app-artifacts
+    steps:
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: app-artifacts
+          path: app-artifacts
 
-#       - name: Login to Azure
-#         run: |
-#           az login --service-principal `
-#             -u ${{ secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_ID }} `
-#             -p ${{ secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET }} `
-#             --tenant ${{ secrets.AZURE_TENANT_ID }}
+      - name: Login to Azure
+        run: |
+          az login --service-principal `
+            -u ${{ secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_ID }} `
+            -p ${{ secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET }} `
+            --tenant ${{ secrets.AZURE_TENANT_ID }}
 
-#       - name: Get Static Web App Token
-#         run: | 
-#           $token = az staticwebapp secrets list `
-#             --name ${{ secrets.AZURE_STATIC_WEB_APP_NAME }} `
-#             --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }} `
-#           echo "STATIC_WEB_APP_TOKEN=$token" >> $GITHUB_ENV
+      - name: Get Static Web App Token
+        run: | 
+          $token = az staticwebapp secrets list `
+            --name ${{ secrets.AZURE_STATIC_WEB_APP_NAME }} `
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }} `
+          echo "STATIC_WEB_APP_TOKEN=$token" >> $GITHUB_ENV
 
-#       - name: Deploy Static Web App
-#         uses: azure/static-web-apps-deploy@v1
-#         id: deploy
-#         with:
-#           azure_static_web_apps_api_token: ${{ env.STATIC_WEB_APP_TOKEN }}
-#           repo_token: ${{ secrets.GITHUB_TOKEN }}
-#           action: "upload"
-#           api_location: ""
-#           app_location: app-artifacts
-#           output_location: ""
-#           skip_app_build: true
-#           skip_api_build: true
+      - name: Deploy Static Web App
+        uses: azure/static-web-apps-deploy@v1
+        id: deploy
+        with:
+          azure_static_web_apps_api_token: ${{ env.STATIC_WEB_APP_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          api_location: ""
+          app_location: app-artifacts
+          output_location: ""
+          skip_app_build: true
+          skip_api_build: true
