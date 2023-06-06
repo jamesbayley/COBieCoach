@@ -31,7 +31,7 @@
 #           az staticwebapp custom-domain set `
 #             --name ${{ secrets.AZURE_STATIC_WEB_APP_NAME }} `
 #             --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }} `
-#             --hostname ${{ secrets.CUSTOM_DOMAIN_NAME }}
+#             --hostname ${{ vars.CUSTOM_DOMAIN_NAME }}
 
 #   build-web-app:
 #     name: Build Web App
@@ -65,7 +65,7 @@
 
 #     environment: 
 #       name: Production
-#       url: ${{ secrets.CUSTOM_DOMAIN_NAME }}
+#       url: ${{ vars.CUSTOM_DOMAIN_NAME }}
 
 #     steps:
 #        - name: Download Build Artifacts
@@ -92,7 +92,7 @@
 #         uses: azure/static-web-apps-deploy@v1
 #         id: deploy
 #         with:
-#           azure_static_web_apps_api_token: ${{ secrets.STATIC_WEB_APP_TOKEN }}
+#           azure_static_web_apps_api_token: ${{ env.STATIC_WEB_APP_TOKEN }}
 #           repo_token: ${{ secrets.GITHUB_TOKEN }}
 #           action: "upload"
 #           api_location: ""
