@@ -36,10 +36,11 @@ jobs:
 
       - name: Set Custom Domain
         run: |
-          az staticwebapp custom-domain set `
+          az staticwebapp hostname set `
             --name ${{ secrets.AZURE_STATIC_WEB_APP_NAME }} `
             --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }} `
-            --hostname ${{ vars.CUSTOM_DOMAIN_NAME }}
+            --hostname ${{ vars.CUSTOM_DOMAIN_NAME }} `
+            --validation-method "dns-txt-token"
 
   build-web-app:
     name: Build Web App
