@@ -93,11 +93,11 @@ jobs:
       - name: Get Static Web App Token
         shell: bash
         run: | 
-          $token = az staticwebapp secrets list \
+          token=$(az staticwebapp secrets list \
             --name ${{ secrets.AZURE_STATIC_WEB_APP_NAME }} \
-            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }} \
-          echo "STATIC_WEB_APP_TOKEN=$token" >> $GITHUB_ENV
-
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP_NAME }})
+          echo "STATIC_WEB_APP_TOKEN=${token}" >> $GITHUB_ENV
+          
       - name: Deploy Static Web App
         uses: azure/static-web-apps-deploy@v1
         id: deploy
