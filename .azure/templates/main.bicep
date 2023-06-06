@@ -8,7 +8,7 @@ param staticWebAppName string
   'eastasia'
   'eastasiastage'
 ])
-param location string = resourceGroup().location
+param location string
 
 resource swa 'Microsoft.Web/staticSites@2022-03-01' = {
   name: staticWebAppName
