@@ -1,13 +1,13 @@
 param staticWebAppName string
 
-@allowed(
-  'westus2',
-  'centralus',
-  'eastus2',
-  'westeurope',
-  'eastasia',
+@allowed([
+  'westus2'
+  'centralus'
+  'eastus2'
+  'westeurope'
+  'eastasia'
   'eastasiastage'
-)
+])
 param location string = resourceGroup().location
 
 resource swa 'Microsoft.Web/staticSites@2022-03-01' = {
