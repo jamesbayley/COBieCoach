@@ -1,36 +1,69 @@
-{  
+{
     "diffEditor.ignoreTrimWhitespace": false,
+  
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
     "editor.inlineSuggest.enabled": true,
-    "editor.rulers": [80],
+    "editor.rulers": [100],
     "editor.tabSize": 2,
+  
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
+  
     "github.copilot.enable": {
       "*": true,
       "yaml": true,
       "plaintext": false,
       "markdown": false
     },
+  
     "files.exclude": {
-        "**/.git": false,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "**/.idea": true,
+      "**/.git": false,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/bin": true,
+      "**/obj": true,
+      "**/.idea": true,
+      "**/fable_*": true,
+      "**/*.fs.js": true,
+      "**/__pycache__": true,
+      "**/node_modules": true,
+      "*.sln.DotSettings.user": true,
     },
-    "liveServer.settings.port": 8000,
-    "liveServer.settings.root": "/public",
-    "liveServer.settings.file": "index.html",
+  
+    "[fsharp]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "Ionide.Ionide-fsharp"
+    },
+  
     "powershell.integratedConsole.showOnStartup": false,
+    "powershell.powerShellDefaultVersion": "/usr/bin/pwsh",
     "powershell.powerShellAdditionalExePaths": {
         "ubuntu": "/opt/microsoft/powershell/7/pwsh",
     },
-    "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono', Menlo, Monaco",
+  
+    "[python]": {
+      "editor.formatOnSave": true,
+    },
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+    "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+    "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+    "python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+    "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+    "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+    "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+    "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+    "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+  
+    "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono', 'Fira Code', Menlo, Monaco",
+  
     "workbench.editor.highlightModifiedTabs": true,
-    "workbench.editor.wrapTabs": true,
-}
+    "workbench.editor.wrapTabs": true
+  }
