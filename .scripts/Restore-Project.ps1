@@ -1,8 +1,11 @@
 Set-Location "$PSScriptRoot/.."
 
 $DirectoryCommands = @(
-  @{ RelativePath = "projects/client"; Command = "npm install -g npm@latest; npm install" }
-  @{ RelativePath = "projects/server"; Command = "dotnet restore" }
+  @{ RelativePath = "projects"; Command = "npm install -g npm@latest" }  
+  @{ RelativePath = "projects"; Command = "dotnet tool restore" }
+  @{ RelativePath = "projects"; Command = "dotnet restore" }
+  @{ RelativePath = "projects/engine"; Command = "npm install" }
+  @{ RelativePath = "projects/webapp"; Command = " npm install" }
 )
 
 $DirectoryCommands | ForEach-Object { 
