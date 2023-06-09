@@ -1,0 +1,32 @@
+{
+  "name": "cobie-coach",
+  "author": "James S. Bayley",
+  "license": "AGPL-3.0-or-later",
+  "browser": "fable_build/cobie-coach.js",
+  "files": [
+    "fable_build/**"
+  ],
+  "keywords": [
+    "engineering",
+    "buildings",
+    "quality",
+    "insights",
+    "bim",
+    "aec"
+  ],
+  "funding": {
+    "type": "github sponsors",
+    "url": "https://github.com/sponsors/jamesbayley"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesbayley/COBieCoach"
+  },
+  "scripts": {
+    "prebuild": "dotnet tool restore",
+    "build": "dotnet fable --lang javascript && node esbuild.config.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.17.16"
+  }
+}
