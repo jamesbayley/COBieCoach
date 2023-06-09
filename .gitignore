@@ -1,2 +1,28 @@
+# .NET
+bin/
+obj/
+.fake
+
+# Fable
+fable_build/
+fable_modules/
+*.fs.js
+
+# Node.js
 node_modules/
+
+# JavaScript
+**/build/
 *.js
+
+# Python
+*.py
+venv/
+__pycache__/
+
+# Rider
+.idea/
+*.sln.DotSettings.user
+
+# MacOS
+.DS_Store
