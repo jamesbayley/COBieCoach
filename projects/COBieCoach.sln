@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "COBieCoach", "engine\COBieCoach.fsproj", "{088D2D36-5545-4319-BB3A-0B8348A69FC5}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "COBieCoach.Api", "api\COBieCoach.Api.fsproj", "{DA8B9C67-D22A-4973-A14B-6256A0F4E652}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{088D2D36-5545-4319-BB3A-0B8348A69FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088D2D36-5545-4319-BB3A-0B8348A69FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088D2D36-5545-4319-BB3A-0B8348A69FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088D2D36-5545-4319-BB3A-0B8348A69FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8B9C67-D22A-4973-A14B-6256A0F4E652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8B9C67-D22A-4973-A14B-6256A0F4E652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8B9C67-D22A-4973-A14B-6256A0F4E652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8B9C67-D22A-4973-A14B-6256A0F4E652}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
