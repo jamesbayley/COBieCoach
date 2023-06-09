@@ -31,7 +31,7 @@
       "**/fable_*": true,
       "**/*.fs.js": true,
       "**/__pycache__": true,
-      "**/node_modules": true,
+      "**/node_modules": false,
       "*.sln.DotSettings.user": true,
     },
   
