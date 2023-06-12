@@ -7,6 +7,7 @@
   
   [![Runtime: .NET 7](https://img.shields.io/badge/Runtime-.NET_7-blueviolet)](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
   [![Language: F#](https://img.shields.io/badge/Language-F%23-blueviolet)](https://learn.microsoft.com/en-us/dotnet/fsharp/what-is-fsharp)
+  [![Svelte: 3.0](https://img.shields.io/badge/Svelte-3.0-orange)](https://svelte.dev/)
 
   [![Production](https://github.com/jamesbayley/COBieCoach/actions/workflows/publish.yml/badge.svg)](https://github.com/jamesbayley/COBieCoach/actions/workflows/publish.yml)
 </div>
