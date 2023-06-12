@@ -1,6 +1,6 @@
 <div align="center">
   <h1>The COBie Coach</h1>
-  <p>"Hey Coach! Can you help me improve my COBie game?"</p>
+  <p>Improving the Health & Fitness of BIM Data</p>
 
   [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/jamesbayley/COBieCoach)
   [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
@@ -24,7 +24,7 @@
 ## What?
 
 <p align="justify">
-The COBie Coach is a free, open-source software solution that helps users to quickly ascertain the quality of their COBie datasets. It also provides helpful <em>coaching</em> advice on how improvements could be made. You'll receive an auto-generated <strong>health check</strong> that details the various metrics and errors analysed during the scan.
+The COBie Coach is a free, open-source software solution that helps users to quickly ascertain the quality of their COBie datasets. After scanning your data, you'll receive a bespoke <strong>health check</strong> that scores key metrics, highlights errors, and suggests helpful <em>coaching</em> tips on how to improve. We hope that you'll love using COBie Coach.
 </p>
 
 ## Why?
