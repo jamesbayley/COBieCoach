@@ -14,13 +14,18 @@
 
 ## Table of Contents
 
-- [Why?](#why)
 - [What?](#what)
-- [Get Started](#get-started)
+- [Why?](#why)
+- [Getting Started](#getting-started)
 - [Data Privacy](#data-privacy)
 - [Open-Source](#open-source)
-- [Contributing](#contributing)
 - [Errata](#errata)
+
+## What?
+
+<p align="justify">
+The COBie Coach is a free, open-source software solution that helps users to quickly ascertain the quality of their COBie datasets. It also provides helpful <em>coaching</em> advice on how improvements could be made. You'll receive an auto-generated <strong>health check</strong> that details the various metrics and errors analysed during the scan.
+</p>
 
 ## Why?
 
@@ -30,22 +35,24 @@ There is emerging demand for smart assets and connected digital twins, particula
 Industy standards such as Construction Operations Building Information Exchange (COBie) and Industry Foundation Classes (IFC) offer a robust foundation upon which to build intelligent systems. Unfortunately, existing techniques used to verify and validate that all required data have been produced to standard are laborious, tedious and error-prone. Moreover, for those whose primary responsibility is to advise Architecture, Engineering & Construction (AEC) professionals on the quality of their structured asset data, automated tools are required that are both performant and reliable.
 </p>
 
-## What?
+## Getting Started
 
 <p align="justify">
-The COBie Coach is a free, open-source software solution that helps users to quickly ascertain the quality of their COBie datasets. It also provides helpful <em>coaching</em> advice on how improvements could be made. You'll receive an auto-generated <strong>health check</strong> that details the various metrics and errors analysed during the scan.
-</p>
-
-## Get Started
-
-<p align="justify">
-  To get started, simply visit <a href="https://www.cobie.coach" target="_blank">The COBie Coach</a> and upload your COBie Excel Workbook.
+To get started, simply visit <a href="https://www.cobie.coach" target="_blank">The COBie Coach</a> and upload your COBie Excel Workbook.
 </p>
 
 ## Data Privacy
 
 <p align="justify">
 We understand that you may have concerns when uploading sensitive building data to our web application. For this reason, we made the conscious decision to run the entire application <em>client-side</em> only! In practice, this means that your data <strong>never</strong> leaves your device. 
+</p>
+  
+## Open-Source
+
+<p align="justify">
+This project is built upon the core tenets of trust, transparency and privacy. To help build this trust, we've decided to open-source this entire solution under the <a href="./LICENSE" target="_blank">AGPL-3.0 License</a>. We encourage you to study our source code and offer feedback on how the product can be improved.
+
+If you'd like to help build COBie Coach, then please check out <a href="./CONTRIBUTING.md" target="_blank">CONTRIBUTING.md</a>.
 </p>
 
 ## Offline-First
@@ -54,11 +61,8 @@ We understand that you may have concerns when uploading sensitive building data 
 Since our solution runs entirely on-device, the app remains fully functional even if you're offline. Provided that you've previously loaded the site at least once when connected to the internet, then your browser should have cached the relevant assets, enabling offline scanning. Perfect for when you're out on-site or travelling with poor connectivity!
 </p>
   
-## Open-Source
-
-## Contributing
-
 ## Errata
 
-If you discover any issues with the tool, please submit an [Issue](https://github.com/jamesbayley/COBieCoach/issues) with sufficient detail that allows us to reproduce the error.
-
+<p align="justify">
+If you discover any issues with the tool, please submit an <a href="https://github.com/jamesbayley/COBieCoach/issues" target="_blank">Issue</a> with sufficient detail that allows us to reproduce the error.
+</p>
