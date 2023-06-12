@@ -14,25 +14,24 @@
 
 ## Table of Contents
 
-- [What?](#what)
 - [Why?](#why)
+- [What?](#what)
 - [Getting Started](#getting-started)
 - [Data Privacy](#data-privacy)
 - [Open-Source](#open-source)
+- [Contributing](#contributing)
 - [Errata](#errata)
-
-## What?
-
-<p align="justify">
-The COBie Coach is a free, open-source software solution that helps users to quickly ascertain the quality of their COBie datasets. After scanning your data, you'll receive a bespoke <strong>health check</strong> that scores key metrics, highlights errors, and suggests helpful <em>coaching</em> tips on how to improve. We hope that you'll love using COBie Coach.
-</p>
 
 ## Why?
 
 <p align="justify">
-There is emerging demand for smart assets and connected digital twins, particularly for critical infrastructure, healthcare and manufacturing. Design and construction teams must be able to deliver complete, accurate and validated asset information to building owners and operators at project handover. 
+There is emerging demand for smart assets and connected digital twins, particularly for critical infrastructure, healthcare and manufacturing projects. Design and construction teams must deliver complete, accurate and validated asset information to building owners and operators at project handover. Whilst, industy standards such as COBie and Industry Foundation Classes (IFC) offer the foundation upon which to build intelligent systems, many of the existing tools used to benchmark COBie data are laborious, tedious and error-prone. For those whose primary responsibility is to advise Architecture, Engineering & Construction (AEC) professionals on asset data quality, we believe they could be better served.
+</p>
   
-Industy standards such as Construction Operations Building Information Exchange (COBie) and Industry Foundation Classes (IFC) offer a robust foundation upon which to build intelligent systems. Unfortunately, existing techniques used to verify and validate that all required data have been produced to standard are laborious, tedious and error-prone. Moreover, for those whose primary responsibility is to advise Architecture, Engineering & Construction (AEC) professionals on the quality of their structured asset data, automated tools are required that are both performant and reliable.
+## What?
+
+<p align="justify">
+COBie Coach is a free, open-source solution that helps users to quickly ascertain the health of Construction Operations Building Information Exchange (COBie) data, with a focus on transparency, privacy and user experience. After scanning your dataset, you'll receive a bespoke <strong>health check</strong> that scores the key metrics, highlights errors in context, and suggests helpful tips on how to improve. We hope that you'll love using COBie Coach!
 </p>
 
 ## Getting Started
@@ -51,14 +50,12 @@ We understand that you may have concerns when uploading sensitive building data 
 
 <p align="justify">
 This project is built upon the core tenets of trust, transparency and privacy. To help build this trust, we've decided to open-source this entire solution under the <a href="./LICENSE" target="_blank">AGPL-3.0 License</a>. We encourage you to study our source code and offer feedback on how the product can be improved.
-
-If you'd like to help build COBie Coach, then please check out <a href="./CONTRIBUTING.md" target="_blank">CONTRIBUTING.md</a>.
 </p>
-
-## Offline-First
+  
+## Contributing
 
 <p align="justify">
-Since our solution runs entirely on-device, the app remains fully functional even if you're offline. Provided that you've previously loaded the site at least once when connected to the internet, then your browser should have cached the relevant assets, enabling offline scanning. Perfect for when you're out on-site or travelling with poor connectivity!
+If you'd like to help build COBie Coach, then please check out our <a href="./CONTRIBUTING.md" target="_blank">guidance</a>.
 </p>
   
 ## Errata
