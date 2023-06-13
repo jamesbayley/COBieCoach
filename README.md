@@ -37,7 +37,7 @@ COBie Coach is a free, open-source solution that helps users to quickly ascertai
 ## Getting Started
 
 <p align="justify">
-Right now, there's not a lot to see. Once we have something valuable to interact with, we would love for you to visit <a href="https://www.cobie.coach" target="_blank">The COBie Coach</a> and upload your COBie Excel Workbook. In the meantime, be sure to ⭐ and watch this repository to keep up-to-date with project developments.
+Right now, there's not a lot to see. Once we have something valuable to interact with, we would love for you to visit <a href="https://www.cobie.coach" target="_blank">The COBie Coach</a> and upload your COBie Excel Workbook. In the meantime, be sure to ⭐ and <em>watch</em> this repository to keep up-to-date with project developments.
 </p>
 
 ## Data Privacy
